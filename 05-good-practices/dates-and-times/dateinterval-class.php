@@ -1,12 +1,12 @@
 <?php
-date_default_timezone_set('America/New_York');
+date_default_timezone_set('Asia/Seoul');
 
-// Create DateTime instance
+// DateTime 인스턴스 생성
 $datetime = new DateTime('2014-01-01 14:00:00');
 
-// Create two weeks interval
+// 두 주 간격 생성
 $interval = new DateInterval('P2W');
 
-// Modify DateTime instance
+//DateTime 인스턴스 수정
 $datetime->add($interval);
 echo $datetime->format('Y-m-d H:i:s');

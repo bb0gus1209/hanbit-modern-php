@@ -2,7 +2,7 @@
 $input = 'john@example.com';
 $isEmail = filter_var($input, FILTER_VALIDATE_EMAIL);
 if ($isEmail !== false) {
-    echo "Success";
+    echo "성공";
 } else {
-    echo "Fail";
+    echo "실패";
 }

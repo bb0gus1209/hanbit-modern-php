@@ -4,4 +4,4 @@ $closure = function ($name) {
 };
 
 echo $closure("Josh");
-// Outputs --> "Hello Josh"
+// 출력 --> "Hello Josh"

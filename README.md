@@ -1,62 +1,45 @@
 # Modern PHP
 
-This is the companion code repository for [Modern PHP](http://shop.oreilly.com/product/0636920033868.do) by Josh Lockhart (O’Reilly).
+이 저장소는 한국어판 [Modern PHP](http://hanbit.co.kr/book/look.html?isbn=978-89-6848-225-0)의 예제 소스 저장소입니다. 원서의 예제 소스는 [여기](https://github.com/codeguy/modern-php)에 있습니다.
 
-## About the Book
+## 책 소개
 
-The PHP language is different than you remember. No longer just about procedural code and monolithic frameworks, PHP has experienced a renaissance to become a full-featured, mature language with object-orientation, namespaces, and a growing collection of reusable component libraries.
+모던 PHP는 여러분이 알고있던 과거의 PHP와는 다르다. PHP는 르네상스를 맞이하고 있다. 이제 PHP는 절차적 코드와 단일 프레임워크에서 벗어나 객체지향, 네임스페이스, 트레이트, 클로저 등의 현대적 기능과 풍부한 컴포넌트 라이브러리를 통해 원숙하고 완전한 모던 언어로 다시 태어났다.
 
-Modern PHP reveals these new language features in action. Author Josh Lockhart—creator of [PHP The Right Way](http://www.phptherightway.com/), a popular community initiative—shows you how to develop PHP applications using best practices for application architecture and planning, databases, security, testing, debugging, and deployment.
+<Modern PHP>는 이러한 새로운 기능들을 소개한다. 커뮤니티 권장안 ‘PHP The Right Way’의 창안자로 유명한 저자 조시 록하트는 이 책에서 애플리케이션 아키텍처, 플래닝, 데이터베이스, 테스팅, 디버깅, 배포에 대한 모범 사례를 보여준다.  
 
-* Learn detailed, practical techniques that you can immediately implement in your PHP project
-* Grow your PHP skillset with the newest language features and modern best practices
-* Get up to speed on new language features of PHP 5.x (OOP, DateTime, namespaces, traits, and more)
-* Discover the latest from the PHP community, including what's new with the Hack programming language and the HipHop Virtual Machine (HHVM)
-* Find out how the new PHP has become a more mature language with community standards, a growing affinity for interoperable components, and a passionate community committed to improving performance.
+* 여러분의 PHP 프로젝트에 즉시 구현할 수 있는 자세한 실전 테크닉 학습
+* 새로운 기능과 현대적인 모범 사례를 이용한 PHP 스킬 향상
+* PHP 5.x의 신기능(OOP, DateTime, 네임스페이스, 트레이트 등) 따라잡기
+* Hack 언어와 힙합 가상 머신(HipHop Virtual Machine, HHVM)등 PHP 커뮤니티의 최신 동향
+* 커뮤니티 표준, 상호운용할 수 있는 컴포넌트들, 성능 향상에 주력하는 열정적인 커뮤니티 등을 통해 원숙한 언어로 거듭난 PHP 
+
 
 <dl>
-    <dt>Title</dt>
-    <dd>Modern PHP
-    <dt>By</dt>
-    <dd>Josh Lockhart</dd>
-    <dt>Publisher</dt>
-    <dd>O'Reilly Media</dd>
-    <dt>Formats</dt>
-    <dd>Print, Safari Books Online</dd>
-    <dt>Print</dt>
-    <dd>February 2015 (est.)</dd>
-    <dt>Pages</dt>
-    <dd>258 (est.)</dd>
-    <dt>Print ISBN</dt>
-    <dd>978-1-4919-0501-2 | ISBN 10:1-4919-0501-8</dd>
+    <dt>제목</dt>
+    <dd>Modern PHP : 네임스페이스, 트레이트, 클로저부터 모범 사례와 최신 도구까지
+    <dt>저자</dt>
+    <dd>조시 록하트</dd>
+    <dt>역자</dt>
+    <dd>정병열</dd>
+    <dt>출판사</dt>
+    <dd>한빛미디어(주)</dd>
+    <dt>페이지</dt>
+    <dd>312</dd>
+    <dt>ISBN</dt>
+    <dd>978-89-6848-225-0</dd>
 </dl>
 
-## About this Repository
+## 이 저장소에는
 
-Each chapter has its own repository directory, and directory contents are organized according to the chapter's content. I've tried to name each code file according to its related Figure ID in the book.
+각 장에 따라 디렉터리가 나눠져 있으며 해당하는 내용들이 디렉터리에 각각 담겨 있다. 각 코드 파일의 이름은 책에 나온 예제에 맞춰져 있다.  
 
-## About the Author
+## 저자 소개
 
-Josh Lockhart created the [Slim Framework](http://slimframework.com/), a popular PHP micro framework that enables rapid web application and API development. Josh also started and currently curates [PHP The Right Way](http://www.phptherightway.com/), a popular initiative in the PHP community that encourages good practices and disseminates quality information for PHP developers around the world.
+조시는 웹 애플리케이션과 API를 빠르게 개발할 수 있는 초소형 PHP 프레임워크인 슬림([Slim Framework](http://slimframework.com/))을 개발했습니다. 또한 전 세계 PHP 개발자들에게 모범 사례를 장려하고 양질의 정보를 제공하는 권장안으로 유명한 ‘[PHP The Right Way](http://www.phptherightway.com/)’를 창안하고 운영하고 있다. 
 
-Josh is a developer at [New Media Campaigns](http://www.newmediacampaigns.com/)—a full service web design, development, and marketing agency in Carrboro, North Carolina—where he enjoys building custom applications with HTML, CSS, PHP, JavaScript, Bash, and various content management frameworks.
+노스캐롤라이나주 카버러에 위치한 풀서비스 웹 디자인, 개발, 마케팅 에이전시 업체인 뉴미디어 캠페인([New Media Campaigns](http://www.newmediacampaigns.com/))에서 개발자로 일하고 있으며 HTML, CSS, PHP, 자바스크립트, Bash와 다양한 콘텐츠 관리 프레임워크를 이용한 맞춤 애플리케이션 만들기를 좋아한다. 
 
-Josh graduated from the [Information and Library Science](http://sils.unc.edu/) program at the University of North Carolina at Chapel Hill in 2008. He currently resides in Chapel Hill, North Carolina with his wonderful wife, Laurel, and their two dogs.
+조시는 2008년 노스캐롤라이나 대학교 채플힐 캠퍼스 정보문헌학 과정([Information and Library Science](http://sils.unc.edu/)을 수료했으며 아내인 로럴과 함께 두 마리 개를 키우며 노스캐롤라이나주 채플힐에 거주하고 있다.
 
-You can follow Josh on [Twitter](https://twitter.com/codeguy), read his [blog](https://joshlockhart.com), and track his open source projects on [GitHub](https://github.com/codeguy).
-
-## Code License and Permission
-
-This book is here to help you get your job done. In general, if example code is offered with this book, you may use it in your programs and documentation. You do not need to contact us for permission unless you’re reproducing a significant portion of the code. For example, writing a program that uses several chunks of code from this book does not require permission. Selling or distributing a CD-ROM of examples from O’Reilly books does require permission. Answering a question by citing this book and quoting example code does not require permission. Incorporating a significant amount of example code from this book into your product’s documentation does require permission.
-We appreciate, but do not require, attribution. An attribution usually includes the title, author, publisher, and ISBN. For example: “Modern PHP by Josh Lockhart (O’Reilly). Copyright 2015 Josh Lockhart, 978-1-491-90501-2.”
-If you feel your use of code examples falls outside fair use or the permission given above, feel free to contact us at permissions@oreilly.com.
-
-## Safari® Books Online
-
-Safari Books Online is an on-demand digital library that delivers expert content in both book and video form from the world’s leading authors in technology and business.
-
-Technology professionals, software developers, web designers, and business and crea‐ tive professionals use Safari Books Online as their primary resource for research, problem solving, learning, and certification training.
-
-Safari Books Online offers a range of plans and pricing for enterprise, government, education, and individuals.
-
-Members have access to thousands of books, training videos, and prepublication manuscripts in one fully searchable database from publishers like O’Reilly Media, Prentice Hall Professional, Addison-Wesley Professional, Microsoft Press, Sams, Que, Peachpit Press, Focal Press, Cisco Press, John Wiley & Sons, Syngress, Morgan Kauf‐ mann, IBM Redbooks, Packt, Adobe Press, FT Press, Apress, Manning, New Riders, McGraw-Hill, Jones & Bartlett, Course Technology, and hundreds more. For more information about Safari Books Online, please visit us online.
+[트위터](https://twitter.com/codeguy), [블로그](https://joshlockhart.com)를 운영하고 있으며 [GitHub](https://github.com/codeguy)에서 조시가 참여한 오픈소스 프로젝트들을 확인할 수 있다.

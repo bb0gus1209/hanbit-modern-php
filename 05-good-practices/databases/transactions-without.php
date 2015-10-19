@@ -1,7 +1,7 @@
 <?php
 require 'settings.php';
 
-// PDO connection
+// PDO 연결
 try {
     $pdo = new PDO(
         sprintf(
@@ -15,12 +15,12 @@ try {
         $settings['password']
     );
 } catch (PDOException $e) {
-    // Database connection failed
-    echo "Database connection failed";
+    // 데이터베이스 연결 실패
+    echo "데이터베이스 연결 실패";
     exit;
 }
 
-// Statements
+// 구문
 $stmtSubtract = $pdo->prepare('
     UPDATE accounts
     SET amount = amount - :amount
@@ -32,14 +32,14 @@ $stmtAdd = $pdo->prepare('
     WHERE name = :name
 ');
 
-// Withdraw funds from account 1
+// 계좌 1에서 자금 인출
 $fromAccount = 'Checking';
 $withdrawal = 50;
 $stmtSubtract->bindParam(':name', $fromAccount);
 $stmtSubtract->bindParam(':amount', $withDrawal, PDO::PARAM_INT);
 $stmtSubtract->execute();
 
-// Deposit funds into account 2
+// 계좌 2에 자금 입금
 $toAccount = 'Savings';
 $deposit = 50;
 $stmtAdd->bindParam(':name', $toAccount);

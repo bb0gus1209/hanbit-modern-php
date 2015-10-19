@@ -5,22 +5,22 @@ class WhovianTest extends PHPUnit_Framework_TestCase
 {
     public function testSetsDoctorWithConstructor()
     {
-        $whovian = new Whovian('Peter Capaldi');
-        $this->assertAttributeEquals('Peter Capaldi', 'favoriteDoctor', $whovian);
+        $whovian = new Whovian('피터 카팔디');
+        $this->assertAttributeEquals('피터 카팔디', 'favoriteDoctor', $whovian);
     }
 
     public function testSaysDoctorName()
     {
-        $whovian = new Whovian('David Tennant');
-        $this->assertEquals('The best doctor is David Tennant', $whovian->say());
+        $whovian = new Whovian('데이비드 테넌트');
+        $this->assertEquals('최고의 닥터는 바로 데이비드 테넌트', $whovian->say());
     }
 
     public function testRespondToInAgreement()
     {
         $whovian = new Whovian('David Tennant');
 
-        $opinion = 'David Tennant is the best doctor, period';
-        $this->assertEquals('I agree!', $whovian->respondTo($opinion));
+        $opinion = '데이비드 테넌트는 이견의 여지가 없는 최고의 닥터입니다.';
+        $this->assertEquals('옳소!', $whovian->respondTo($opinion));
     }
 
     /**
@@ -28,9 +28,9 @@ class WhovianTest extends PHPUnit_Framework_TestCase
      */
     public function testRespondToInDisagreement()
     {
-        $whovian = new Whovian('David Tennant');
+        $whovian = new Whovian('데이비드 테넌트');
 
-        $opinion = 'No way. Matt Smith was awesome!';
+        $opinion = '아냐. 맷 스미스가 끝내주지!';
         $whovian->respondTo($opinion);
     }
 }

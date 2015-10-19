@@ -1,14 +1,14 @@
 <?php
-// Use Composer autoloader
+// 컴포저 오토로더 사용
 require 'vendor/autoload.php';
 
-// Import Monolog namespaces
+// 모놀로그 네임스페이스 불러오기
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-// Setup Monolog logger
+// 모놀로그 로거 설정
 $log = new Logger('my-app-name');
 $log->pushHandler(new StreamHandler('logs/development.log', Logger::WARNING));
 
-// Use logger
-$log->warning('This is a warning!');
+// 로거 사용
+$log->warning('경고가 발생했습니다!');

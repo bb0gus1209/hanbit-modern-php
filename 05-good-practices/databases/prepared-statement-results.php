@@ -1,7 +1,7 @@
 <?php
 require 'settings.php';
 
-// PDO connection
+// PDO 연결
 try {
     $pdo = new PDO(
         sprintf(
@@ -15,41 +15,41 @@ try {
         $settings['password']
     );
 } catch (PDOException $e) {
-    // Database connection failed
-    echo "Database connection failed";
+    // 데이터베이스 연결 실패
+    echo "데이터베이스 연결 실패";
     exit;
 }
 
-// Build and execute SQL query
+// SQL 쿼리 작성 및 실행
 $sql = 'SELECT id, email FROM users WHERE email = :email';
 $statement = $pdo->prepare($sql);
 $email = filter_input(INPUT_GET, 'email');
-$statement->bindValue(':email', $email, PDO::PARAM_INT);
+$statement->bindValue(':email', $email, PDO::PARAM_STR);
 
-// Iterate results one at a time
-echo 'One result as a time as associative array', PHP_EOL;
+// 한번에 결과 하나씩 순회
+echo '한번에 결과 하나씩 연관 배열로 얻기', PHP_EOL;
 $statement->execute();
 while (($result = $statement->fetch(PDO::FETCH_ASSOC)) !== false) {
     echo $result['email'], PHP_EOL;
 }
 
-// Iterate ALL results at once
-echo 'All results at once as associative array', PHP_EOL;
+// 전체 결과를 한번에 순회
+echo '전체 결과를 연관 배열로 얻기', PHP_EOL;
 $statement->execute();
 $allResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 foreach ($allResults as $result) {
     echo $result['email'], PHP_EOL;
 }
 
-// Fetch one column value at a time
-echo 'Fetch one column, one row at a time as associative array', PHP_EOL;
+// 한번에 하나의 컬럼 값을 가져오기
+echo '하나의 컬럼 값을 하나씩 연관 배열로 가져오기', PHP_EOL;
 $statement->execute();
 while (($email = $statement->fetchColumn(1)) !== false) {
     echo $email, PHP_EOL;
 }
 
-// Iterate results as objects
-echo 'One result as a time as object', PHP_EOL;
+// 결과를 객체로 순회
+echo '결과 객체를 한번에 하나씩 가져오기', PHP_EOL;
 $statement->execute();
 while (($result = $statement->fetchObject()) !== false) {
     echo $result->email, PHP_EOL;

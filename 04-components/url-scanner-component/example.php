@@ -6,5 +6,5 @@ $urls = [
     'http://php.net',
     'http://sdfssdwerw.org'
 ];
-$scanner = new \Oreilly\ModernPHP\Url\Scanner($urls);
+$scanner = new \Hanbit\ModernPHP\Url\Scanner($urls);
 print_r($scanner->getInvalidUrls());

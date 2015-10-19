@@ -5,6 +5,6 @@ class Bar
 {
     public function sayHello()
     {
-        echo "Hi there";
+        echo "안녕하세요";
     }
 }

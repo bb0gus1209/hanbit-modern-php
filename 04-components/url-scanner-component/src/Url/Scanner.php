@@ -1,10 +1,10 @@
 <?php
-namespace Oreilly\ModernPHP\Url;
+namespace Hanbit\ModernPHP\Url;
 
 class Scanner
 {
     /**
-     * @var array An array of URLs
+     * @var array URL 배열
      */
     protected $urls;
 
@@ -14,8 +14,8 @@ class Scanner
     protected $httpClient;
 
     /**
-     * Constructor
-     * @param array $urls An array of URLs to scan
+     * 생성자
+     * @param array $urls 스캔할 URL 배열
      */
     public function __construct(array $urls)
     {
@@ -24,7 +24,7 @@ class Scanner
     }
 
     /**
-     * Get invalid URLs
+     * 접근할 수 없는 URL 가져오기
      * @return array
      */
     public function getInvalidUrls()
@@ -49,9 +49,9 @@ class Scanner
     }
 
     /**
-     * Get HTTP status code for URL
-     * @param string $url The remote URL
-     * @return int The HTTP status code
+     * URL 접속 결과로 반환된HTTP 상태 코드 얻기
+     * @param string $url 원격 URL
+     * @return int The HTTP 상태 코드
      */
     protected function getStatusCodeForUrl($url)
     {

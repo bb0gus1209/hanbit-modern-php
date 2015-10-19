@@ -5,9 +5,9 @@ function enclosePerson($name) {
     };
 }
 
-// Enclose "Clay" string in closure
+// "Clay" 문자열을 클로저로 감싼다.
 $clay = enclosePerson('Clay');
 
-// Invoke closure with command
-echo $clay('get me sweet tea!');
-// Outputs --> "Clay, get me sweet tea!"
+// 클로저를 호출한다.
+echo $clay('차 한잔 부탁해요!');
+// 출력 --> "Clay, 차 한잔 부탁해요!"

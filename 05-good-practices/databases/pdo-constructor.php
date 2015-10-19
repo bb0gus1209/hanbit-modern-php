@@ -1,12 +1,12 @@
 <?php
 try {
     $pdo = new PDO(
-        'mysql:host=127.0.0.1;dbname=books;port=3306;charset=utf8',
-        'USERNAME',
-        'PASSWORD'
+        'mysql:host=127.0.0.1;dbname=acme;port=3306;charset=utf8',
+        'josh',
+        'sekrit'
     );
 } catch (PDOException $e) {
-    // Database connection failed
-    echo "Database connection failed";
+    // 데이터베이스 연결 실패
+    echo "데이터베이스 연결 실패";
     exit;
 }

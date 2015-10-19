@@ -14,7 +14,7 @@ try {
         $settings['password']
     );
 } catch (PDOException $e) {
-    // Database connection failed
-    echo "Database connection failed";
+    // 데이터베이스 연결 실패
+    echo "데이터베이스 연결 실패";
     exit;
 }

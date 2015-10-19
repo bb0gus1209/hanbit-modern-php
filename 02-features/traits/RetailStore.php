@@ -3,5 +3,5 @@ class RetailStore
 {
     use Geocodable;
 
-    // Class implementation goes here
+    // 여기에 클래스를 구현한다.
 }

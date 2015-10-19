@@ -7,15 +7,15 @@ require 'CommandOutputDocument.php';
 
 $documentStore = new DocumentStore();
 
-// Add HTML document
+// HTML 문서 추가
 $htmlDoc = new HtmlDocument('http://php.net');
 $documentStore->addDocument($htmlDoc);
 
-// Add stream document
+// 스트림 문서 추가
 $streamDoc = new StreamDocument(fopen('stream.txt', 'rb'));
 $documentStore->addDocument($streamDoc);
 
-// Add terminal command document
+// 터미널 명령 문서 추가
 $cmdDoc = new CommandOutputDocument('cat /etc/hosts');
 $documentStore->addDocument($cmdDoc);
 

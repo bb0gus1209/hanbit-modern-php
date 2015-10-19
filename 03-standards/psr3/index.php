@@ -4,13 +4,13 @@ require 'vendor/autoload.php';
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-date_default_timezone_set('America/New_York');
+date_default_timezone_set('Asia/Seoul');
 
-// Prepare logger
+// 로거 준비
 $log = new Logger('myApp');
 $log->pushHandler(new StreamHandler('logs/development.log', Logger::DEBUG));
 $log->pushHandler(new StreamHandler('logs/production.log', Logger::WARNING));
 
-// Use logger
-$log->debug('This is a debug message');
-$log->warning('This is a warning message');
+// 로거 사용
+$log->debug('디버그 메시지입니다.');
+$log->warning('경고 메시지입니다.');

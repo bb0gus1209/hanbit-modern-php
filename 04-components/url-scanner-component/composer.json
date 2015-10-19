@@ -1,5 +1,5 @@
 {
-    "name": "modernphp/scanner",
+    "name": "hanbit-modernphp/scanner",
     "description": "Scan URLs from a CSV file and report inaccessible URLs",
     "keywords": ["url", "scanner", "csv"],
     "homepage": "http://example.com",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Oreilly\\ModernPHP\\": "src/"
+            "Hanbit\\ModernPHP\\": "src/"
         }
     }
 }

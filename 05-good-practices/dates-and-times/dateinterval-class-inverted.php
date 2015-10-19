@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/New_York');
+date_default_timezone_set('Asia/Seoul');
 
 $dateStart = new \DateTime();
 $dateInterval = \DateInterval::createFromDateString('-1 day');

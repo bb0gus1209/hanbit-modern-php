@@ -7,7 +7,7 @@ class Whovian
     protected $favoriteDoctor;
 
     /**
-     * Constructor
+     * 생성자
      * @param  string $favoriteDoctor
      */
     public function __construct($favoriteDoctor)
@@ -16,16 +16,16 @@ class Whovian
     }
 
     /**
-     * Say
+     * 발언하기
      * @return string
      */
     public function say()
     {
-        return 'The best doctor is ' . $this->favoriteDoctor;
+        return '최고의 닥터는 바로 ' . $this->favoriteDoctor;
     }
 
     /**
-     * Respond to
+     * 응답하기
      * @param  string $input
      * @return string
      * @throws \Exception
@@ -38,12 +38,12 @@ class Whovian
         if (strpos($input, $myDoctor) === false) {
             throw new Exception(
                 sprintf(
-                    'No way! %s is the best doctor ever!',
+                    '무슨 소리! 최고의 닥터는 %s라구!',
                     $this->favoriteDoctor
                 )
             );
         }
 
-        return 'I agree!';
+        return '옳소!';
     }
 }

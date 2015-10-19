@@ -1,21 +1,21 @@
 <?php
 session_start();
 try {
-    // Get email address from request body
+    // 요청 본문에서 이메일 주소 가져오기
     $email = filter_input(INPUT_POST, 'email');
 
-    // Get password from request body
+    // 요청 본문에서 비밀번호 가져오기
     $password = filter_input(INPUT_POST, 'password');
 
-    // Find account with email address (THIS IS PSUEDO-CODE)
+    // 이메일 주소로 계정 찾기(예시 코드)
     $user = User::findByEmail($email);
 
-    // Verify password with account password hash
+    // 계정 비밀번호 해시로 비밀번호 검증하기
     if (password_verify($password, $user->password_hash) === false) {
-        throw new Exception('Invalid password');
+        throw new Exception('올바르지 않은 비밀번호');
     }
 
-    // Re-hash password if necessary (see note below)
+    // 필요한 경우 해시 재생성하기(아래 내용 참고)
     $currentHashAlgorithm = PASSWORD_DEFAULT;
     $currentHashOptions = array('cost' => 15);
     $passwordNeedsRehash = password_needs_rehash(
@@ -24,7 +24,7 @@ try {
         $currentHashOptions
     );
     if ($passwordNeedsRehash === true) {
-        // Save new password hash (THIS IS PSUEDO-CODE)
+        // 신규 비밀번호 해시 저장하기(예시 코드)
         $user->password_hash = password_hash(
             $password,
             $currentHashAlgorithm,
@@ -33,11 +33,11 @@ try {
         $user->save();
     }
 
-    // Save login status to session
+    // 로그인 상태 세션 저장하기
     $_SESSION['user_logged_in'] = 'yes';
     $_SESSION['user_email'] = $email;
 
-    // Redirect to profile page
+    // 프로필 페이지로 이동하기
     header('HTTP/1.1 302 Redirect');
     header('Location: /user-profile.php');
 } catch (Exception $e) {
