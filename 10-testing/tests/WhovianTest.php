@@ -17,7 +17,7 @@ class WhovianTest extends PHPUnit_Framework_TestCase
 
     public function testRespondToInAgreement()
     {
-        $whovian = new Whovian('David Tennant');
+        $whovian = new Whovian('데이비드 테넌트');
 
         $opinion = '데이비드 테넌트는 이견의 여지가 없는 최고의 닥터입니다.';
         $this->assertEquals('옳소!', $whovian->respondTo($opinion));
