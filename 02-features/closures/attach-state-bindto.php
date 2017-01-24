@@ -8,6 +8,7 @@ class App
 
     public function addRoute($routePath, $routeCallback)
     {
+        // bindTo 메서드는 PHP 5.4 이상부터 지원된다.
         $this->routes[$routePath] = $routeCallback->bindTo($this, __CLASS__);
     }
 
